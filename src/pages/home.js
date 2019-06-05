@@ -1,12 +1,13 @@
-import React from 'react'
-import '../App.css'
-import '../styles/home.css'
+import React from 'react';
+import '../App.css';
+import '../styles/home.css';
+
 
 class Home extends React.Component {
   constructor(props){
       super(props);
         this.state = {
-          message: {}
+          splashURL: ""
       }
   }
 
@@ -18,16 +19,17 @@ class Home extends React.Component {
       APIString = "https://perosnal-site-backend.herokuapp.com/photography";
     }
 
-    fetch(`${APIString}/`)
-    .then(message => message.json())
-    .then(message => this.setState({message}))
+
+    fetch(`${APIString}/splash-image`)
+    .then(splashURL => splashURL.json())
+    .then(splashURL => this.setState({splashURL: splashURL.URL}))
 
   }
 
   render(){
     return (
       <div>
-        <h3>{this.state.message.message}</h3>
+        <img className="backgroundImage" src={this.state.splashURL} alt =""></img>
       </div>
     );
   }

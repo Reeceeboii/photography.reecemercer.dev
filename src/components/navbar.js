@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 
@@ -31,10 +32,10 @@ class Navigation extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/collections">Collections</NavLink>
+              <NavLink tag={Link} to="/collections">Collections</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/about">About</NavLink>
+              <NavLink tag={Link} to="/about">About</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://reecemercer.dev?ref=rmphotography">Parent site</NavLink>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import '../styles/home.css';
 
@@ -32,7 +33,7 @@ class Home extends React.Component {
         <div className="titleBlock">
           <h1 className="mainTitle">Reece Mercer</h1>
           <h1 className="mainSubtitle">photography</h1>
-          <a className="mainLink" href='/collections'>View photos</a>
+          <Link className="mainLink" tag={Link} to="/collections">View photos</Link>
           <h1 className="copy">&copy; Reece Mercer 2019</h1>
         </div>
       </div>

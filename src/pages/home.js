@@ -29,7 +29,12 @@ class Home extends React.Component {
     return (
       <div>
         <img className="backgroundImage" src={this.state.splashURL} alt =""></img>
-        <h1 className="mainTitle">Reece Mercer</h1>
+        <div className="titleBlock">
+          <h1 className="mainTitle">Reece Mercer</h1>
+          <h1 className="mainSubtitle">photography</h1>
+          <a className="mainLink" href='/collections'>View photos</a>
+          <h1 className="copy">&copy; Reece Mercer 2019</h1>
+        </div>
       </div>
     );
   }

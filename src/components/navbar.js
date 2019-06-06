@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, DropdownItem } from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 
 import '../styles/nav.css'
@@ -23,8 +23,11 @@ class Navigation extends Component {
   render() {
     return (
       <Navbar className="Navigation" light expand="md">
-        <NavbarBrand href="/">Reece Mercer</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
+        <NavbarBrand href="/">Reece Mercer</NavbarBrand>
+        <NavLink className="smallNavIcon" href="https://www.linkedin.com/in/reece-mercer/"><FaLinkedin/></NavLink>
+        <NavLink className="smallNavIcon" href="https://github.com/Reeceeboii"><FaGithub/></NavLink>
+        <NavLink className="smallNavIcon" href="https://www.instagram.com/reece_mercer/"><FaInstagram/></NavLink>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
@@ -34,17 +37,16 @@ class Navigation extends Component {
               <NavLink href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://reecemercer.dev">Parent site</NavLink>
-            </NavItem>
-            <DropdownItem divider />
-            <NavItem>
-              <NavLink href="https://www.linkedin.com/in/reece-mercer/"><FaLinkedin/></NavLink>
+              <NavLink href="https://reecemercer.dev?ref=rmphotography">Parent site</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/Reeceeboii"><FaGithub/></NavLink>
+              <NavLink className="largeNavIcon" href="https://www.linkedin.com/in/reece-mercer/"><FaLinkedin/></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://www.instagram.com/reece_mercer/"><FaInstagram/></NavLink>
+              <NavLink className="largeNavIcon" href="https://github.com/Reeceeboii"><FaGithub/></NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="largeNavIcon" href="https://www.instagram.com/reece_mercer/"><FaInstagram/></NavLink>
             </NavItem>
           </Nav>
         </Collapse>

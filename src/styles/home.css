@@ -1,5 +1,30 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
 .backgroundImage {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+}
+
+.mainTitle {
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 7vw;
+  white-space: nowrap;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .mainTitle {
+    font-size: 15vw;
+  }
 }

@@ -1,3 +1,21 @@
 .Navigation {
   font-size: 20px;
 }
+
+.smallNavIcon {
+  display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .smallNavIcon {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .largeNavIcon {
+    display: none;
+  }
+}

@@ -6,7 +6,8 @@
 .Preview {
   width: 90%;
   margin: auto;
-  box-shadow:0 10px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+  box-shadow:0 10px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
 
 .previewIMG {
   max-width:100%;
@@ -19,6 +20,7 @@
 }
 
 .PreviewDate {
+  font-size: 1.5vw;
   text-align: center;
 }
 
@@ -29,6 +31,10 @@
 
   .PreviewTitle{
     font-size: 7vw;
+  }
+
+  .PreviewDate {
+    font-size: 5vw;
   }
 
 }

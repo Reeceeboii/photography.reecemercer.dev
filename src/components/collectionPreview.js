@@ -37,8 +37,8 @@ class CollectionPreview extends Component {
           <CardImg className="previewIMG" width="50%" src={this.state.previewURL} alt="Card image cap" />
           <CardBody>
             <CardTitle className="PreviewTitle">{this.state.previewTitle}</CardTitle>
-            <CardText>
-              <small className="PreviewDate">Collection created on {this.state.creationDate}</small>
+            <CardText className="PreviewDate">
+              <small>Collection created on {this.state.creationDate}</small>
             </CardText>
           </CardBody>
         </Card>

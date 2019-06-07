@@ -28,7 +28,7 @@ class Home extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="Home">
         <img className="backgroundImage" src={this.state.splashURL} alt =""></img>
         <div className="titleBlock">
           <h1 className="mainTitle">Reece Mercer</h1>

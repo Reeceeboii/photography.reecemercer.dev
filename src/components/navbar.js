@@ -23,7 +23,7 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Navbar className="Navigation" light expand="md">
+      <Navbar className="Navigation" light expand="md" fixed={`top`}>
         <NavbarToggler onClick={this.toggle} />
         <NavbarBrand href="/">Reece Mercer</NavbarBrand>
         <NavLink className="smallNavIcon" href="https://www.linkedin.com/in/reece-mercer/"><FaLinkedin/></NavLink>
@@ -31,6 +31,9 @@ class Navigation extends Component {
         <NavLink className="smallNavIcon" href="https://www.instagram.com/reece_mercer/"><FaInstagram/></NavLink>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink tag={Link} to="/">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink tag={Link} to="/collections">Collections</NavLink>
             </NavItem>

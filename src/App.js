@@ -12,24 +12,21 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-
+        <Nav/>
           <Route exact={true} path='/' render={() => (
-            <div>
-              <Nav/>
+            <div className="App">
               <Home/>
             </div>
           )}/>
 
           <Route exact={true} path='/about' render={() => (
-            <div>
-              <Nav/>
+            <div className="App">
               <About/>
             </div>
           )}/>
 
           <Route exact={true} path='/collections' render={() => (
-            <div>
-              <Nav/>
+            <div className="App">
               <Collections/>
             </div>
           )}/>

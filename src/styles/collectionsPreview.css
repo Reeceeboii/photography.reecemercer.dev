@@ -1,0 +1,34 @@
+.PreviewContainer {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.Preview {
+  width: 90%;
+  margin: auto;
+  box-shadow:0 10px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+
+.previewIMG {
+  max-width:100%;
+  height:auto;
+}
+
+.PreviewTitle {
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.PreviewDate {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .Preview {
+    width: 90%;
+  }
+
+  .PreviewTitle{
+    font-size: 7vw;
+  }
+
+}

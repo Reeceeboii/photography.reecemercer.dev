@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Row } from 'reactstrap';
 import '../App.css';
 import '../styles/collections.css';
 
@@ -32,11 +33,16 @@ class Collections extends Component {
         <div className="ContentSection">
           <h1 className="Header">Collections</h1>
 
+          <Row>
           {
             this.state.collections.map(collection => (
-              <CollectionPreview name={collection.Key}/>
+              <Col xs="12" sm="12" xl="6">
+                <CollectionPreview key={collection.Key} imageKey={collection.Key}
+                created={collection.LastModified}/>
+              </Col>
             ))
           }
+          </Row>
         </div>
     );
   }

@@ -27,11 +27,11 @@ class CollectionPreview extends Component {
 
     fetch(`${APIString}/collection-preview/${this.props.imageKey}`)
     .then(response => response.json())
-    .then(response => this.setState({
-      previewURL: response.URL,
-      desc: response.Desc
-    }))
+    .then(response => this.setState({previewURL: response.URL}))
 
+    fetch(`${APIString}/collection-description/${this.props.imageKey}`)
+    .then(response => response.json())
+    .then(response => this.setState({desc: response.desc}))
 
 
   }

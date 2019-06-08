@@ -24,6 +24,11 @@
   text-align: center;
 }
 
+.Description {
+  font-size: 1.5vw;
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   .Preview {
     width: 90%;
@@ -34,6 +39,10 @@
   }
 
   .PreviewDate {
+    font-size: 5vw;
+  }
+
+  .Description {
     font-size: 5vw;
   }
 

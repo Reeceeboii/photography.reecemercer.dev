@@ -10,6 +10,7 @@ class CollectionPreview extends Component {
     super(props);
     this.state = {
       previewURL: "",
+      desc: "",
       // remove trailing / from key so it can be displayed nicely
       previewTitle: this.props.imageKey.slice(0, this.props.imageKey.length -1),
       creationDate: this.props.created.split("T")[0]
@@ -26,7 +27,12 @@ class CollectionPreview extends Component {
 
     fetch(`${APIString}/collection-preview/${this.props.imageKey}`)
     .then(response => response.json())
-    .then(response => this.setState({previewURL: response.URL}))
+    .then(response => this.setState({
+      previewURL: response.URL,
+      desc: response.Desc
+    }))
+
+
 
   }
 
@@ -37,6 +43,7 @@ class CollectionPreview extends Component {
           <CardImg className="previewIMG" width="50%" src={this.state.previewURL} alt="Card image cap" />
           <CardBody>
             <CardTitle className="PreviewTitle">{this.state.previewTitle}</CardTitle>
+            <CardText className="Description">{this.state.desc}</CardText>
             <CardText className="PreviewDate">
               <small>Collection created on {this.state.creationDate}</small>
             </CardText>

@@ -5,6 +5,7 @@ import './App.css';
 import Nav from './components/navbar'
 import Home from './pages/home'
 import Collections from './pages/collections'
+import Collection from './pages/collection'
 import About from './pages/about'
 
 class App extends React.Component {
@@ -30,6 +31,13 @@ class App extends React.Component {
             <div className="App">
               <Nav/>
               <Collections/>
+            </div>
+          )}/>
+
+          <Route exact={true} path='/collection/:key' render={({ match }) => (
+            <div className="App">
+              <Nav/>
+              <Collection collectionName={match.params.key}/>
             </div>
           )}/>
 

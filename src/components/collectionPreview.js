@@ -39,16 +39,18 @@ class CollectionPreview extends Component {
   render() {
     return (
       <div className="PreviewContainer">
-        <Card className="Preview">
-          <CardImg className="previewIMG" width="50%" src={this.state.previewURL} alt="Card image cap" />
-          <CardBody>
-            <CardTitle className="PreviewTitle">{this.state.previewTitle}</CardTitle>
-            <CardText className="Description">{this.state.desc}</CardText>
-            <CardText className="PreviewDate">
-              <small>Collection created on {this.state.creationDate}</small>
-            </CardText>
-          </CardBody>
-        </Card>
+        <Link className="collectionLink" tag={Link} to={`collection/${this.props.imageKey}`}>
+          <Card className="Preview">
+            <CardImg className="previewIMG" width="50%" src={this.state.previewURL} alt="" />
+            <CardBody>
+              <CardTitle className="PreviewTitle">{this.state.previewTitle}</CardTitle>
+              <CardText className="Description">{this.state.desc}</CardText>
+              <CardText className="PreviewDate">
+                <small>Collection created on {this.state.creationDate}</small>
+              </CardText>
+            </CardBody>
+          </Card>
+        </Link>
       </div>
     );
   }

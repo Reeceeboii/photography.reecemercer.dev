@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'reactstrap';
 import '../App.css';
-import '../styles/collections.css';
 
 import CollectionPreview from '../components/collectionPreview';
 
@@ -36,7 +35,7 @@ class Collections extends Component {
           <Row>
           {
             this.state.collections.map(collection => (
-              <Col xs="12" sm="12" xl="6">
+              <Col xs="12" sm="12" md="6" xl="4">
                 <CollectionPreview key={collection.Key} imageKey={collection.Key}
                 created={collection.LastModified}/>
               </Col>

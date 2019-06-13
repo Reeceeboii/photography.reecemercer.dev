@@ -1,6 +1,7 @@
 .PreviewContainer {
   padding-top: 20px;
   padding-bottom: 50px;
+  transition: transform .2s;
 }
 
 .Preview {
@@ -12,6 +13,11 @@
 .previewIMG {
   max-width:100%;
   height:auto;
+  transition: transform .2s;
+}
+
+.PreviewContainer:hover {
+  transform: scale(0.9);
 }
 
 .PreviewTitle {
@@ -27,6 +33,14 @@
 .Description {
   font-size: 1.5vw;
   text-align: center;
+}
+
+.collectionLink {
+  color: black;
+}
+
+.collectionLink:hover {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {

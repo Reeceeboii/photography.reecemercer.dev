@@ -1,0 +1,15 @@
+.SingleImage {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  transition: transform .2s;
+}
+
+.SingleImage:hover {
+  transform: scale(1.05);
+}
+
+.LargeSingleImage {
+  max-width: 100%;
+  height: auto;
+}

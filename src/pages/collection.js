@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'reactstrap';
 import '../App.css';
-import '../styles/collections.css';
+import '../styles/collection.css';
+
+import SingleImage from '../components/singleImage';
 
 import CollectionPreview from '../components/collectionPreview';
 
@@ -22,7 +24,7 @@ class Collection extends Component {
       APIString = "https://perosnal-site-backend.herokuapp.com/photography";
     }
 
-    fetch(`${APIString}/collection-half-res/${this.props.collectionName}`)
+    fetch(`${APIString}/collection-contents/${this.props.collectionName}`)
     .then(response => response.json())
     .then(response => this.setState({photoLinks: response}))
 
@@ -31,12 +33,18 @@ class Collection extends Component {
   render(){
     return (
         <div className="ContentSection">
-          <h1 className="Header">{`collection name here`}</h1>
-          {
-            this.state.photoLinks.map(photo => (
-              <img src={photo.url} alt=""/>
-            ))
-          }
+          <h1 className="Header">{this.props.collectionName}</h1>
+          <div className="CollectionContainer">
+            <Row>
+            {
+              this.state.photoLinks.map(photo => (
+                <Col xs="12" sm="12" md="4" xl="4">
+                  <SingleImage halfurl={photo.halfurl} fullurl={photo.fullurl}/>
+                </Col>
+              ))
+            }
+            </Row>
+          </div>
         </div>
     );
   }

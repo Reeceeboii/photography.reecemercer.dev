@@ -38,7 +38,7 @@ class Collection extends Component {
             <Row>
             {
               this.state.photoLinks.map(photo => (
-                <Col xs="12" sm="12" md="4" xl="4">
+                <Col className="ImageCol" xs="4" sm="4" md="4" xl="4">
                   <SingleImage halfurl={photo.halfurl} fullurl={photo.fullurl}/>
                 </Col>
               ))

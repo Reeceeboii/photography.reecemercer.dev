@@ -18,7 +18,7 @@ class Collections extends Component {
     if(process.env.NODE_ENV !== 'production'){
       APIString = "/photography";
     }else{
-      APIString = "https://perosnal-site-backend.herokuapp.com/photography";
+      APIString = "https://rm-backend-services.herokuapp.com/photography";
     }
 
 

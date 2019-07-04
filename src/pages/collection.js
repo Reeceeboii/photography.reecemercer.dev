@@ -21,7 +21,7 @@ class Collection extends Component {
     if(process.env.NODE_ENV !== 'production'){
       APIString = "/photography";
     }else{
-      APIString = "https://perosnal-site-backend.herokuapp.com/photography";
+      APIString = "https://personal-site-backend.herokuapp.com/photography";
     }
 
     fetch(`${APIString}/collection-contents/${this.props.collectionName}`)

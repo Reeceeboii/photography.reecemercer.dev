@@ -22,7 +22,7 @@ class CollectionPreview extends Component {
     if(process.env.NODE_ENV !== 'production'){
       APIString = "/photography";
     }else{
-      APIString = "https://personal-site-backend.herokuapp.com/photography";
+      APIString = "https://rm-backend-services.herokuapp.com/photography";
     }
 
     fetch(`${APIString}/collection-preview/${this.props.imageKey}`)

@@ -12,13 +12,26 @@
 .ContentSection {
   padding-top: 62px;
   width: 100vw;
-  height: auto;
+  height: auto%;
   margin: auto;
-  background-color: #EEEEEE;
+  position: static;
+}
+
+.TextSection {
+  padding-top: 20px;
+  width: 75vw;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 768px) {
   .Header {
-    font-size: 10vw;
+    font-size: 11vw;
+  }
+
+  .TextSection {
+    width: 90vw;
+    font-size: 6vw;
   }
 }

@@ -35,8 +35,8 @@ class Collections extends Component {
           <Row>
           {
             this.state.collections.map(collection => (
-              <Col xs="12" sm="12" md="6" xl="4">
-                <CollectionPreview key={collection.Key} imageKey={collection.Key}
+              <Col key={collection.Key} xs="12" sm="12" md="6" xl="4">
+                <CollectionPreview imageKey={collection.Key}
                 created={collection.LastModified}/>
               </Col>
             ))

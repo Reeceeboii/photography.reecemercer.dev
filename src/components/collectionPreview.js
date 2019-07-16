@@ -39,7 +39,7 @@ class CollectionPreview extends Component {
   render() {
     return (
       <div className="PreviewContainer">
-        <Link className="collectionLink" tag={Link} to={`collection/${this.props.imageKey}`}>
+        <Link className="collectionLink" to={`collection/${this.props.imageKey}`}>
           <Card className="Preview">
             <CardImg className="previewIMG" width="50%" src={this.state.previewURL} alt="" />
             <CardBody>

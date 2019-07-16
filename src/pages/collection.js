@@ -5,7 +5,6 @@ import '../styles/collection.css';
 
 import SingleImage from '../components/singleImage';
 import APIString from '../misc-modules/backend-url';
-import CollectionPreview from '../components/collectionPreview';
 
 
 class Collection extends Component {

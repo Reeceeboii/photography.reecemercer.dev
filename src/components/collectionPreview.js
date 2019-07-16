@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 import APIString from '../misc-modules/backend-url';

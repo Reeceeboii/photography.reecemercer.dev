@@ -4,8 +4,7 @@ import '../App.css';
 import '../styles/collection.css';
 
 import SingleImage from '../components/singleImage';
-
-import CollectionPreview from '../components/collectionPreview';
+import APIString from '../misc-modules/backend-url';
 
 
 class Collection extends Component {
@@ -17,13 +16,6 @@ class Collection extends Component {
   }
 
   componentDidMount = () => {
-    let APIString = "";
-    if(process.env.NODE_ENV !== 'production'){
-      APIString = "/photography";
-    }else{
-      APIString = "https://rm-backend-services.herokuapp.com/photography";
-    }
-
     fetch(`${APIString}/collection-contents/${this.props.collectionName}`)
     .then(response => response.json())
     .then(response => this.setState({photoLinks: response}))
@@ -38,7 +30,7 @@ class Collection extends Component {
             <Row>
             {
               this.state.photoLinks.map(photo => (
-                <Col className="ImageCol" xs="4" sm="4" md="4" xl="4">
+                <Col key={photo.fullurl} className="ImageCol" xs="4" sm="4" md="4" xl="4">
                   <SingleImage halfurl={photo.halfurl} fullurl={photo.fullurl}/>
                 </Col>
               ))

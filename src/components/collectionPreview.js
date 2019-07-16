@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardBody, Button, CardTitle, CardText, CardImg } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+import APIString from '../misc-modules/backend-url';
 import '../styles/collectionsPreview.css';
 
 
@@ -18,13 +19,6 @@ class CollectionPreview extends Component {
   }
 
   componentDidMount = () => {
-    let APIString = "";
-    if(process.env.NODE_ENV !== 'production'){
-      APIString = "/photography";
-    }else{
-      APIString = "https://rm-backend-services.herokuapp.com/photography";
-    }
-
     fetch(`${APIString}/collection-preview/${this.props.imageKey}`)
     .then(response => response.json())
     .then(response => this.setState({previewURL: response.URL}))
@@ -39,7 +33,7 @@ class CollectionPreview extends Component {
   render() {
     return (
       <div className="PreviewContainer">
-        <Link className="collectionLink" tag={Link} to={`collection/${this.props.imageKey}`}>
+        <Link className="collectionLink" to={`collection/${this.props.imageKey}`}>
           <Card className="Preview">
             <CardImg className="previewIMG" width="50%" src={this.state.previewURL} alt="" />
             <CardBody>

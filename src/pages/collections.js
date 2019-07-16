@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Col, Row } from 'reactstrap';
 import '../App.css';
 
+import APIString from '../misc-modules/backend-url';
 import CollectionPreview from '../components/collectionPreview';
 
 
@@ -14,14 +15,6 @@ class Collections extends Component {
   }
 
   componentDidMount(){
-    let APIString = "";
-    if(process.env.NODE_ENV !== 'production'){
-      APIString = "/photography";
-    }else{
-      APIString = "https://rm-backend-services.herokuapp.com/photography";
-    }
-
-
     fetch(`${APIString}/collection-names`)
     .then(res => res.json())
     .then(res => this.setState({collections: res}))

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import '../styles/home.css';
+import APIString from '../misc-modules/backend-url';
 
 
 class Home extends React.Component {
@@ -13,13 +14,6 @@ class Home extends React.Component {
   }
 
   componentDidMount(){
-    let APIString = "";
-    if(process.env.NODE_ENV !== 'production'){
-      APIString = "/photography";
-    }else{
-      APIString = "https://rm-backend-services.herokuapp.com/photography";
-    }
-
     fetch(`${APIString}/splash-image`)
     .then(splashURL => splashURL.json())
     .then(splashURL => this.setState({splashURL: splashURL.URL}))

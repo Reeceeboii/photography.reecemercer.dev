@@ -7,6 +7,10 @@
   display: none;
 }
 
+.statsIcon {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 
 @media only screen and (max-width: 768px) {
   .smallNavIcon {

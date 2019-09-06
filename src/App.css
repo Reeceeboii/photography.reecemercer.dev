@@ -12,9 +12,10 @@
 .ContentSection {
   padding-top: 62px;
   width: 100vw;
-  height: auto%;
+  height: 100vh;
   margin: auto;
   position: static;
+  overflow: auto;
 }
 
 .TextSection {
@@ -25,6 +26,13 @@
   font-size: 1.5vw;
 }
 
+.Loading {
+  align-content: center;
+  margin: auto;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   .Header {
     font-size: 11vw;
@@ -32,6 +40,10 @@
 
   .TextSection {
     width: 90vw;
+    font-size: 6vw;
+  }
+
+  .Loading {
     font-size: 6vw;
   }
 }

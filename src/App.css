@@ -12,9 +12,10 @@
 .ContentSection {
   padding-top: 62px;
   width: 100vw;
-  height: auto%;
+  height: 100vh;
   margin: auto;
   position: static;
+  overflow: auto;
 }
 
 .TextSection {

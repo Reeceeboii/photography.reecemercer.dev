@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Col, Row, Spinner } from 'reactstrap';
+import {isMobile} from 'react-device-detect';
+
 import '../App.css';
 import '../styles/collection.css';
 
@@ -32,6 +34,7 @@ class Collection extends Component {
     .then(response => response.json())
     .then(response => this.setState({ photoLinks: response }))
     .then(response => this.setState({ maxItems: this.state.photoLinks.length }))
+    .then(response => isMobile ? this.setState({ items: 25 }) : this.setState({ items: this.state.items }))
   }
 
   renderItems = () => {
@@ -61,9 +64,8 @@ class Collection extends Component {
   loadMore = () => {
     if(this.state.items < this.state.maxItems){
       this.setState({ loading: true });
-      setTimeout(() => {
-        this.setState({ items: this.state.items + 10, loading: false });
-      }, 250);
+      this.setState({ items: this.state.items + 10, loading: false });
+  
     }else{
       this.setState({ items: this.state.maxItems, loading: false, displayLoading: `You've reached the end of this collection! 
       More content coming soon :)` })
@@ -82,7 +84,9 @@ class Collection extends Component {
             <Row>
               {this.renderItems()}
             </Row>
-            {this.state.displayLoading}
+            <div className="Loading">
+              {this.state.displayLoading}
+            </div>
           </div>
         </div>
     );

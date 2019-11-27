@@ -13,8 +13,8 @@ class CollectionPreview extends Component {
       previewURL: "",
       desc: "",
       // remove trailing / from key so it can be displayed nicely
-      previewTitle: this.props.imageKey.slice(0, this.props.imageKey.length -1),
-      creationDate: this.props.created.split("T")[0]
+      previewTitle: this.props.imageKey,
+      creationDate: this.props.created
     }
   }
 
@@ -50,4 +50,4 @@ class CollectionPreview extends Component {
   }
 }
 
-export default CollectionPreview
+export default CollectionPreview;

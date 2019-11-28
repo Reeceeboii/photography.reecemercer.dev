@@ -16,12 +16,23 @@ class App extends React.Component {
     this.state = {
       collections: []
     }
+    
   }
 
   componentDidMount(){
     fetch(`${APIString}/collection-names`)
     .then(res => res.json())
     .then(res => this.setState({collections: res}))
+  }
+
+  checkCollectionValid(key){
+    var found = false;
+    this.state.collections.forEach(name => {
+      if(name.Key === key){
+        found = true;
+      }
+    })
+    return found ? <Collection collectionName={key}/> : <NotFound/>;
   }
 
   render(){
@@ -51,7 +62,7 @@ class App extends React.Component {
         <Route exact={true} path='/collection/:key' render={({ match }) => (
           <div className="App">
             <Nav/>
-            <Collection collectionName={match.params.key}/>
+            { this.checkCollectionValid(match.params.key) }
           </div>
         )}/>
 

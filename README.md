@@ -1,4 +1,4 @@
-# This repo is now archived and all of my photos have now been migrated over to my main website (https://reecemercer.dev)
+# This repo is now archived and all of my photos have been migrated over to my main website (https://reecemercer.dev)
 
 ### Hosted at a subdomain of my main personal website, this is a photography portfolio, acting as a place for me to showcase my photography.
 

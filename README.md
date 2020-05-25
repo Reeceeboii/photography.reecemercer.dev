@@ -1,6 +1,4 @@
-# Photography site
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0ab90b8d-52c0-4f95-a458-3dc83aef45e8/deploy-status)](https://app.netlify.com/sites/flamboyant-sinoussi-4dddff/deploys)
+# This repo is now archived and all of my photos have now been migrated over to my main website (https://reecemercer.dev)
 
 ### Hosted at a subdomain of my main personal website, this is a photography portfolio, acting as a place for me to showcase my photography.
 
